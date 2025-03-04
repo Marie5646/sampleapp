@@ -31,9 +31,9 @@ jobs:
           path: ${{env.DOTNET_ROOT}}\myapp
 
   call-reusable-deployment-workflow-job:
-    needs: Build-job
+    needs: build-job
 
-    uses: sampleapp/.github/workflows/reusable-deploy.yml@main
+    uses: Marie5646/sampleapp/.github/workflows/reusable-deploy.yml@main
     with:
       package-name: .net-app
       app-name: appsvc1
